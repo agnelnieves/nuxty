@@ -1,10 +1,16 @@
 # nuxty
 
+## Requirements
+
+- Node 16.14.0
+- npm 7 or later (if possible use nvm)
+- yarn
+
 ## Build Setup
 
 ```bash
 # install dependencies
-$ yarn install
+$ yarn install --frozen-lockfile # installs dependencies with the versions specified in the package.lock.json file
 
 # serve with hot reload at localhost:3000
 $ yarn dev
