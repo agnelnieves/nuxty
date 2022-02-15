@@ -1,6 +1,6 @@
 <template>
   <main>
-    <section class="relative pt-6 pb-16 sm:pb-44 bg-blue-800">
+    <section class="hero">
       <div class="mt-16 mx-auto max-w-7xl px-4 sm:mt-24 sm:px-6">
         <div class="text-center">
           <img
@@ -27,7 +27,7 @@
         </div>
       </div>
     </section>
-    <section class="relative overflow-hidden sm:-mt-36 pb-12">
+    <section class="articles">
       <div class="relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
           <div class="relative max-w-7xl mx-auto">
@@ -38,7 +38,7 @@
               <div
                 v-for="article in articles"
                 :key="article.title"
-                class="flex flex-col rounded-lg shadow-lg overflow-hidden"
+                class="card"
               >
                 <div class="flex-shrink-0">
                   <img
@@ -89,7 +89,7 @@
         </a>
       </div>
     </section>
-    <div class="bg-indigo-700">
+    <div class="cta">
       <div
         class="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8"
       >
@@ -123,3 +123,22 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+.hero {
+  @apply relative pt-6 pb-16 sm:pb-44 bg-blue-800;
+}
+
+.articles {
+  @apply relative overflow-hidden sm:-mt-36 pb-12;
+}
+
+.cta {
+  @apply bg-indigo-700;
+}
+
+/* ArticleCard */
+.card {
+  @apply flex flex-col rounded-lg shadow-lg overflow-hidden;
+}
+</style>
