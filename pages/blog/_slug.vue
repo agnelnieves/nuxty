@@ -82,6 +82,10 @@ h1 {
 }
 
 .article img {
-  @apply rounded-xl mt-5 2xl:max-w-5xl xl:max-w-3xl lg:max-w-xl md:max-w-md sm:max-w-sm max-w-full mx-auto px-4;
+  @apply my-3 rounded-xl mt-5 2xl:max-w-5xl xl:max-w-3xl lg:max-w-xl md:max-w-md sm:max-w-sm max-w-full mx-auto px-4;
+}
+
+.article p {
+  @apply my-3;
 }
 </style>

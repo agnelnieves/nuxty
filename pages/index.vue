@@ -90,7 +90,7 @@ export default {
   name: 'IndexPage',
   async asyncData({ $content }) {
     const articles = await $content('articles')
-      .limit(5)
+      .limit(6)
       .only([
         'title',
         'description',

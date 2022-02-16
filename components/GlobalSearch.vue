@@ -14,14 +14,14 @@
       <li
         v-for="article of articles"
         :key="article.slug"
-        class="hover:bg-gray-200"
+        class="hover:bg-gray-200 rounded-lg"
       >
         <NuxtLink
           class="flex p-3 gap-4"
           :to="{ name: 'blog-slug', params: { slug: article.slug } }"
         >
           <img
-            class="object-cover h-10 w-10"
+            class="object-cover h-10 w-10 rounded-md"
             :src="article.image.src"
             :alt="article.image.alt"
           />

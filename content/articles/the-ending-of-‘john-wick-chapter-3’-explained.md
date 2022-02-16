@@ -1,5 +1,5 @@
 ---
-title: "The Ending of ‘John Wick: Chapter 3’ Explained"
+title: 'The Ending of ‘John Wick: Chapter 3’ Explained'
 date: 2022-02-16T07:23:50.760Z
 image:
   src: https://filmschoolrejects.com/wp-content/uploads/2019/05/john-wick-3.jpg
@@ -10,9 +10,10 @@ categories:
   - Ending
 published: true
 ---
-***[Ending Explained](https://filmschoolrejects.com/topics/ending-explained/)** is a recurring series in which we explore the finales, secrets, and themes of interesting movies and shows, both new and old. In this entry, we chase the ending of John Wick: Chapter 3.*
 
-- - -
+**\*[Ending Explained](https://filmschoolrejects.com/topics/ending-explained/)** is a recurring series in which we explore the finales, secrets, and themes of interesting movies and shows, both new and old. In this entry, we chase the ending of John Wick: Chapter 3.\*
+
+---
 
 A dog’s death can destroy an audience. This is not new information. We’ve all experienced the sensation. We’re scooched down in the bottom of our seat. There’s a big bucket of popcorn in our lap, and we’re munching away as some masked slasher vivisects one teenager after another. Then comes the moment when the killer turns his sharp instrument on the household pet. Oh, hell no. This demon has got to die.
 
@@ -20,7 +21,7 @@ I’m not here to psychoanalyze the intense anger that arises when a fictional a
 
 Watching **John Wick** eradicate villains using guns, knives, bats, axes, swords, cars, books, pencils, and his bare hands throughout three movies is the cathartic release of rage animal lovers have wanted ever since they saw their first pitiful cinematic hound parish. **Keanu Reeves** is not just avenging his wife’s Daisy, he’s repaying the pain of Pippet from *Jaws*, Max’s Australian shepherd in *The Road Warrior*, Hooch from *Turner & Hooch*, and Sam in *I Am Legend*. The absurd pile of corpses beneath Wick’s feet makes perfect sense.
 
-All on account of a puppy? Duh. Such fury and gratuitous violence have rarely felt so justified. By the time we reach the climax of ***John Wick: Chapter 3 – Parabellum***, a healthy audience member might want peace for our “hero,” but for the person who feels more pain for Marley than Me, there should never be an end to the Baba Yaga’s vengeance quest. **Alfie Allen** let the rampage out of the bottle in 2014, and it will never be contained.
+All on account of a puppy? Duh. Such fury and gratuitous violence have rarely felt so justified. By the time we reach the climax of **_John Wick: Chapter 3 – Parabellum_**, a healthy audience member might want peace for our “hero,” but for the person who feels more pain for Marley than Me, there should never be an end to the Baba Yaga’s vengeance quest. **Alfie Allen** let the rampage out of the bottle in 2014, and it will never be contained.
 
 *Chapter 3* does not offer a resolution to John Wick. He had a few years out of the game. He knew love. He knew happiness. His sole mission in life now is to live so that he can enjoy the memory of that bliss experienced beside Helen (**Bridget Moynahan**). He will never know such warmth again, but he had it once, and that’s enough.
 
