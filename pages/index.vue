@@ -28,85 +28,57 @@
       </div>
     </section>
     <section class="articles">
-      <div class="relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6">
-          <div class="relative max-w-7xl mx-auto">
-            <div
-              class="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none"
-            >
-              <!-- BLOG CARDS -->
-              <NuxtLink
-                v-for="article in articles"
-                :key="article.title"
-                :to="{ name: 'blog-slug', params: { slug: article.slug } }"
-              >
-                <div class="card">
-                  <div v-if="article.image" class="flex-shrink-0">
-                    <img
-                      class="h-48 w-full object-cover"
-                      :src="article.image.src"
-                      :alt="article.image.alt"
-                    />
-                  </div>
-                  <div
-                    class="flex-1 bg-white p-6 flex flex-col justify-between"
-                  >
-                    <div class="flex-1">
-                      <div class="flex items-center">
-                        <div class="flex space-x-1 text-sm text-gray-500">
-                          <time :datetime="article.date">
-                            {{ getDate(article.date) }}
-                          </time>
-                          <span aria-hidden="true"> &middot; </span>
-                          <!-- TODO: add dynamic read time -->
-                          <span> 4 min read </span>
-                        </div>
-                      </div>
-                      <a href="#" class="block mt-2">
-                        <p class="text-xl font-semibold text-gray-900">
-                          {{ article.title }}
-                        </p>
-                      </a>
-                    </div>
-                    <div class="mt-4 flex gap-2 flex-wrap">
-                      <span
-                        v-for="category in article.categories"
-                        :key="category"
-                        class="inline-flex items-center px-2.5 py-0.5 rounded-md text-sm font-medium bg-gray-100 text-gray-800"
-                      >
-                        {{ category }}
-                      </span>
+      <div class="container">
+        <div class="article-grid">
+          <!-- BLOG CARDS -->
+          <NuxtLink
+            v-for="article in articles"
+            :key="article.title"
+            :to="{ name: 'blog-slug', params: { slug: article.slug } }"
+          >
+            <div class="card">
+              <div v-if="article.image" class="media">
+                <img :src="article.image.src" :alt="article.image.alt" />
+              </div>
+              <div class="content">
+                <div class="flex-1">
+                  <div class="flex items-center">
+                    <div class="metadata">
+                      <time :datetime="article.date">
+                        {{ getDate(article.date) }}
+                      </time>
+                      <span aria-hidden="true"> &middot; </span>
+                      <!-- TODO: add dynamic read time -->
+                      <span> 4 min read </span>
                     </div>
                   </div>
+                  <p class="title">
+                    {{ article.title }}
+                  </p>
                 </div>
-              </NuxtLink>
+                <div class="categories">
+                  <span
+                    v-for="category in article.categories"
+                    :key="category"
+                    class="category"
+                  >
+                    {{ category }}
+                  </span>
+                </div>
+              </div>
             </div>
-          </div>
+          </NuxtLink>
         </div>
       </div>
 
       <div class="text-center px-4">
-        <a
-          href="#"
-          class="mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 sm:w-auto"
-        >
-          View all posts
-        </a>
+        <a href="#" class="button"> View all posts </a>
       </div>
     </section>
     <div class="cta">
-      <div
-        class="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8"
-      >
-        <h2 class="text-3xl font-extrabold text-white sm:text-4xl">
-          Have a project in mind? Let’s get to work.👋📫
-        </h2>
-        <a
-          href="#"
-          class="mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50 sm:w-auto"
-        >
-          Contact me
-        </a>
+      <div class="container">
+        <h2 class="title">Have a project in mind? Let’s get to work.👋📫</h2>
+        <a href="#" class="button light"> Contact me </a>
       </div>
     </div>
   </main>
@@ -146,16 +118,71 @@ export default {
   @apply relative pt-6 pb-16 sm:pb-44 bg-blue-800;
 }
 
+/* ARTICLES */
 .articles {
   @apply relative overflow-hidden sm:-mt-36 pb-12;
 }
 
-.cta {
-  @apply bg-indigo-700;
+.articles .container {
+  @apply relative max-w-7xl mx-auto px-4 sm:px-6;
+}
+
+.articles .article-grid {
+  @apply mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none;
 }
 
 /* ArticleCard */
 .card {
   @apply flex flex-col rounded-lg shadow-lg overflow-hidden;
+}
+
+.card .media {
+  @apply flex-shrink-0;
+}
+
+.card .media img {
+  @apply h-48 w-full object-cover;
+}
+
+.card .content {
+  @apply flex-1 bg-white p-6 flex flex-col justify-between;
+}
+
+.card .content .metadata {
+  @apply flex space-x-1 text-sm text-gray-500;
+}
+
+.card .content .title {
+  @apply text-xl font-semibold text-gray-900;
+}
+
+.card .content .categories {
+  @apply mt-4 flex gap-2 flex-wrap;
+}
+
+.card .content .categories .category {
+  @apply inline-flex items-center px-2.5 py-0.5 rounded-md text-sm font-medium bg-gray-100 text-gray-800;
+}
+
+.button {
+  @apply mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 sm:w-auto;
+}
+
+.button.light {
+  @apply text-indigo-600 bg-white hover:bg-indigo-50;
+}
+
+/* CTA */
+
+.cta {
+  @apply bg-indigo-700;
+}
+
+.cta .container {
+  @apply max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8;
+}
+
+.cta .container .title {
+  @apply text-3xl font-extrabold text-white sm:text-4xl;
 }
 </style>
