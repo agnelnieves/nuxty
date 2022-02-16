@@ -1,5 +1,6 @@
 <template>
   <div>
+    <MainNavigation :links="[{ route: '/', label: 'Blog' }]" />
     <Nuxt />
     <footer class="bg-white">
       <div
