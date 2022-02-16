@@ -41,11 +41,11 @@
                 :to="{ name: 'blog-slug', params: { slug: article.slug } }"
               >
                 <div class="card">
-                  <div class="flex-shrink-0">
+                  <div v-if="article.image" class="flex-shrink-0">
                     <img
                       class="h-48 w-full object-cover"
-                      src="https://images.unsplash.com/photo-1547586696-ea22b4d4235d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80"
-                      alt=""
+                      :src="article.image.src"
+                      :alt="article.image.alt"
                     />
                   </div>
                   <div
@@ -54,8 +54,9 @@
                     <div class="flex-1">
                       <div class="flex items-center">
                         <div class="flex space-x-1 text-sm text-gray-500">
-                          <!-- TODO: add dynamic published date -->
-                          <time datetime="2020-03-10"> Mar 10, 2020 </time>
+                          <time :datetime="article.date">
+                            {{ getDate(article.date) }}
+                          </time>
                           <span aria-hidden="true"> &middot; </span>
                           <!-- TODO: add dynamic read time -->
                           <span> 4 min read </span>
@@ -112,6 +113,7 @@
 </template>
 
 <script>
+import { formatDate } from '~/utils'
 export default {
   name: 'IndexPage',
   async asyncData({ $content }) {
@@ -120,7 +122,7 @@ export default {
       .only([
         'title',
         'description',
-        'img',
+        'image',
         'date',
         'categories',
         'published',
@@ -132,6 +134,9 @@ export default {
     return {
       articles,
     }
+  },
+  methods: {
+    getDate: (date) => formatDate(date),
   },
 }
 </script>

@@ -2,30 +2,34 @@
   <article class="article">
     <h1>{{ article.title }}</h1>
     <p class="text-center text-gray-400">
-      Posted on: {{ formatDate(article.createdAt) }} • Updated on:
-      {{ formatDate(article.updatedAt) }}
+      Posted on: {{ getDate(article.createdAt) }} • Updated on:
+      {{ getDate(article.updatedAt) }}
     </p>
+    <img
+      loading="lazy"
+      class="mt-5"
+      :src="article.image.src"
+      :alt="article.image.alt"
+    />
     <div class="article-content">
       <nuxt-content :document="article" />
     </div>
   </article>
 </template>
 
-<script lang="js">
+<script>
+import { formatDate } from '~/utils'
 export default {
   name: 'ArticlePage',
   async asyncData({ $content, params }) {
     // getting the article's data from the params
     const article = await $content('articles', params.slug).fetch()
     return {
-      article
+      article,
     }
   },
   methods: {
-    formatDate(date) {
-      const options = { year: 'numeric', month: 'long', day: 'numeric' }
-      return new Date(date).toLocaleString('en', options)
-    },
+    getDate: (date) => formatDate(date),
   },
 }
 </script>

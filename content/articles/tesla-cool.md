@@ -7,9 +7,10 @@ image:
 description: Some description
 published: true
 ---
+
 ## Eyoo
 
-**Check** *out* this [link](https://tesla.com)
+**Check** _out_ this [link](https://tesla.com)
 
 `$variable`
 
@@ -18,17 +19,17 @@ Hello from tesla article
 > Some quote
 
 ```javascript
-const message = "hello tesla";
-console.log("vroom vroom " + message);
+const message = 'hello tesla'
+console.log('vroom vroom ' + message)
 ```
 
-* Do you like lists?
+- Do you like lists?
 
-  * indented?
+  - indented?
 
-    * super indented?
+    - super indented?
 
-      * Super duper indented?
+      - Super duper indented?
 
 1. Ordered list?
 
@@ -38,4 +39,4 @@ console.log("vroom vroom " + message);
 
          1. super duper indented?
 
-![Teslamodel s with spoiler](/images/cms/vorsteiner_tesla_model_3_volta_aero_program_b0001108-platemod.jpg "Tesla model S")
+![Teslamodel s with spoiler](/images/cms/vorsteiner_tesla_model_3_volta_aero_program_b0001108-platemod.jpg 'Tesla model S')
