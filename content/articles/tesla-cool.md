@@ -5,6 +5,9 @@ image:
   src: /images/cms/vorsteiner_tesla_model_3_volta_aero_program_b0001108-platemod.jpg
   alt: Tesla model S with spoiler
 description: Some description
+categories:
+  - Tesla
+  - Cool
 published: true
 ---
 
