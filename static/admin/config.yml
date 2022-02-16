@@ -1,6 +1,12 @@
 backend:
   name: git-gateway
   branch: main
+  commit_messages:
+    create: 'cms(create): {{collection}} {{slug}}'
+    update: 'cms(update): {{collection}} "{{slug}}"'
+    delete: 'cms(delete): {{collection}} "{{slug}}"'
+    uploadMedia: 'cms(upload): “{{path}}”'
+    deleteMedia: 'cms(delete): “{{path}}”'
 
 media_folder: static/images/cms
 public_folder: /images/cms

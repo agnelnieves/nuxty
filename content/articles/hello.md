@@ -1,11 +1,17 @@
 ---
 title: Hello World
-description: 'This post goes over the structure each article should have for this starter project...'
+description: This post goes over the structure each article should have for this
+  starter project...
 img:
   - src: https://images.unsplash.com/photo-1519337265831-281ec6cc8514?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80
   - alt: Image for hello world post
 date: March 29, 2021
-categories: ['Web Development', 'UX/UI']
+categories:
+  - Web Development
+  - UX/UI
+image:
+  src: https://images.unsplash.com/photo-1519337265831-281ec6cc8514?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80
+  alt: Person working on laptop
 published: true
 ---
 
