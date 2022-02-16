@@ -1,20 +1,22 @@
 <template>
-  <article class="article">
-    <h1>{{ article.title }}</h1>
-    <p class="text-center text-gray-400">
-      Posted on: {{ getDate(article.createdAt) }} • Updated on:
-      {{ getDate(article.updatedAt) }}
-    </p>
+  <div>
+    <div class="metadata">
+      <h1>{{ article.title }}</h1>
+      <p class="text-gray-400">
+        Posted on: {{ getDate(article.createdAt) }} • Updated on:
+        {{ getDate(article.updatedAt) }}
+      </p>
+    </div>
     <img
       loading="lazy"
-      class="mt-5"
+      class="main-img"
       :src="article.image.src"
       :alt="article.image.alt"
     />
-    <div class="article-content">
+    <article class="article">
       <nuxt-content :document="article" />
-    </div>
-  </article>
+    </article>
+  </div>
 </template>
 
 <script>
@@ -36,14 +38,50 @@ export default {
 
 <style scoped>
 .article {
-  @apply max-w-4xl mx-auto text-white my-10;
-}
-
-.article-content {
-  @apply bg-gray-200 p-4 md:p-12 text-black mt-4;
+  @apply 2xl:max-w-6xl xl:max-w-4xl lg:max-w-2xl md:max-w-lg sm:max-w-sm max-w-full mx-auto px-6 text-black my-10 flex;
 }
 
 h1 {
-  @apply text-3xl text-center text-black;
+  @apply text-4xl md:text-5xl lg:text-6xl text-black;
+}
+
+.metadata {
+  @apply pt-20 2xl:max-w-6xl xl:max-w-4xl lg:max-w-2xl md:max-w-lg sm:max-w-sm max-w-full mx-auto px-6;
+}
+
+.main-img {
+  @apply rounded-xl mt-5 2xl:max-w-7xl xl:max-w-5xl lg:max-w-4xl md:max-w-2xl sm:max-w-lg max-w-full mx-auto px-4;
+}
+</style>
+
+<style>
+.article * {
+  @apply max-w-full;
+}
+
+/* Unscopped styles */
+
+h2 {
+  @apply text-4xl mt-8 mb-6;
+}
+
+h3 {
+  @apply text-3xl;
+}
+
+h4 {
+  @apply text-2xl;
+}
+
+h5 {
+  @apply text-xl;
+}
+
+h6 {
+  @apply text-base;
+}
+
+.article img {
+  @apply rounded-xl mt-5 2xl:max-w-5xl xl:max-w-3xl lg:max-w-xl md:max-w-md sm:max-w-sm max-w-full mx-auto px-4;
 }
 </style>
