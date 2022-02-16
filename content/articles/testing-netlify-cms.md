@@ -5,4 +5,5 @@ image: /images/cms/1.jpg
 description: This is a test from netlify cms
 published: true
 ---
+
 This is a test from Netlify's headless CMS
