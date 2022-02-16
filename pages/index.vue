@@ -35,46 +35,50 @@
               class="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none"
             >
               <!-- BLOG CARDS -->
-              <div
+              <NuxtLink
                 v-for="article in articles"
                 :key="article.title"
-                class="card"
+                :to="{ name: 'blog-slug', params: { slug: article.slug } }"
               >
-                <div class="flex-shrink-0">
-                  <img
-                    class="h-48 w-full object-cover"
-                    src="https://images.unsplash.com/photo-1547586696-ea22b4d4235d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80"
-                    alt=""
-                  />
-                </div>
-                <div class="flex-1 bg-white p-6 flex flex-col justify-between">
-                  <div class="flex-1">
-                    <div class="flex items-center">
-                      <div class="flex space-x-1 text-sm text-gray-500">
-                        <!-- TODO: add dynamic published date -->
-                        <time datetime="2020-03-10"> Mar 10, 2020 </time>
-                        <span aria-hidden="true"> &middot; </span>
-                        <!-- TODO: add dynamic read time -->
-                        <span> 4 min read </span>
+                <div class="card">
+                  <div class="flex-shrink-0">
+                    <img
+                      class="h-48 w-full object-cover"
+                      src="https://images.unsplash.com/photo-1547586696-ea22b4d4235d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80"
+                      alt=""
+                    />
+                  </div>
+                  <div
+                    class="flex-1 bg-white p-6 flex flex-col justify-between"
+                  >
+                    <div class="flex-1">
+                      <div class="flex items-center">
+                        <div class="flex space-x-1 text-sm text-gray-500">
+                          <!-- TODO: add dynamic published date -->
+                          <time datetime="2020-03-10"> Mar 10, 2020 </time>
+                          <span aria-hidden="true"> &middot; </span>
+                          <!-- TODO: add dynamic read time -->
+                          <span> 4 min read </span>
+                        </div>
                       </div>
+                      <a href="#" class="block mt-2">
+                        <p class="text-xl font-semibold text-gray-900">
+                          {{ article.title }}
+                        </p>
+                      </a>
                     </div>
-                    <a href="#" class="block mt-2">
-                      <p class="text-xl font-semibold text-gray-900">
-                        {{ article.title }}
-                      </p>
-                    </a>
-                  </div>
-                  <div class="mt-4 flex gap-2 flex-wrap">
-                    <span
-                      v-for="category in article.categories"
-                      :key="category"
-                      class="inline-flex items-center px-2.5 py-0.5 rounded-md text-sm font-medium bg-gray-100 text-gray-800"
-                    >
-                      {{ category }}
-                    </span>
+                    <div class="mt-4 flex gap-2 flex-wrap">
+                      <span
+                        v-for="category in article.categories"
+                        :key="category"
+                        class="inline-flex items-center px-2.5 py-0.5 rounded-md text-sm font-medium bg-gray-100 text-gray-800"
+                      >
+                        {{ category }}
+                      </span>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </NuxtLink>
             </div>
           </div>
         </div>
@@ -113,7 +117,15 @@ export default {
   async asyncData({ $content }) {
     const articles = await $content('articles')
       .limit(5)
-      .only(['title', 'description', 'img', 'date', 'categories', 'published'])
+      .only([
+        'title',
+        'description',
+        'img',
+        'date',
+        'categories',
+        'published',
+        'slug',
+      ])
       .where({ published: true })
       .sortBy('createdAt', 'asc')
       .fetch()
