@@ -61,23 +61,23 @@ h1 {
 
 /* Unscopped styles */
 
-h2 {
+.article h2 {
   @apply text-4xl mt-8 mb-6;
 }
 
-h3 {
+.article h3 {
   @apply text-3xl;
 }
 
-h4 {
+.article h4 {
   @apply text-2xl;
 }
 
-h5 {
+.article h5 {
   @apply text-xl;
 }
 
-h6 {
+.article h6 {
   @apply text-base;
 }
 

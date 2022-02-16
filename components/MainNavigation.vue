@@ -10,7 +10,7 @@
   >
     <div
       id="nav-wrapper"
-      class="w-full mx-auto overflow-hidden max-w-full"
+      class="w-full mx-auto max-w-full"
       :class="{
         'h-full bg-white': showMobileMenu,
         'rounded-xl sm:p-6': !scrolled,
@@ -33,6 +33,12 @@
             </nuxt-link>
           </li>
         </ul>
+        <div class="relative">
+          <GlobalSearch
+            class="hidden sm:flex absolute right-0"
+            style="top: -24px"
+          />
+        </div>
         <button
           class="flex flex-col justify-between items-end bg-gray-200 py-4 px-3 sm:hidden toggle-btn rounded-2xl cursor-pointer toggle-button"
           :class="{ 'toggle-active': showMobileMenu }"
