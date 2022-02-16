@@ -31,5 +31,9 @@ collections:
           - { label: 'Source', name: 'src', widget: 'image' }
           - { label: 'Alternate text', name: 'alt', widget: 'string' }
       - { label: 'Description', name: 'description', widget: 'string' }
+      - label: 'Categories'
+        name: 'categories'
+        widget: 'list'
+        default: []
       - { label: 'Body', name: 'body', widget: 'markdown' }
       - { label: 'Published', name: 'published', widget: 'boolean' }
