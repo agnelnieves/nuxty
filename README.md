@@ -1,5 +1,9 @@
 # nuxty
 
+<img src="./static/images/og-seo/nuxty.png">
+
+Production ready Nuxtjs starter
+
 ## Requirements
 
 - Node 16.14.0
