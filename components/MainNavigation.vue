@@ -21,7 +21,7 @@
         class="nav-content flex justify-between items-center mx-auto max-w-7xl"
       >
         <nuxt-link class="block p-2" to="/">
-          <img class="h-9" style="max-width: 120px" :src="logo" />
+          <NuxtyLogo class="h-9" style="max-width: 120px" />
         </nuxt-link>
         <ul class="m-0 p-0 hidden sm:flex">
           <li v-for="(link, i) in links" :key="i">
