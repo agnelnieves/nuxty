@@ -165,17 +165,17 @@ export default {
 }
 
 .button {
-  @apply mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 sm:w-auto;
+  @apply mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-nuxty-darker hover:bg-nuxty-dark sm:w-auto;
 
   &.light {
-    @apply text-indigo-600 bg-white hover:bg-indigo-50;
+    @apply text-nuxty-darker bg-white;
   }
 }
 
 /* CTA */
 
 .cta {
-  @apply bg-indigo-700;
+  @apply bg-nuxty-darker;
 
   .container {
     @apply max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8;

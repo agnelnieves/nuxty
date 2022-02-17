@@ -6,6 +6,7 @@ module.exports = {
         'nuxty-darker': '#012A35',
         'nuxty-darkest': '#001A21',
         'nuxty-primary': '#32F0A2',
+        'nuxty-light': '#B1FEDE',
       },
     },
   },

@@ -12,9 +12,9 @@
       id="nav-wrapper"
       class="w-full mx-auto max-w-full"
       :class="{
-        'h-full bg-white': showMobileMenu,
+        'h-full bg-nuxty-darker': showMobileMenu,
         'rounded-xl sm:p-6': !scrolled,
-        'sm:p-2 shadow-lg bg-white bg-opacity-100': scrolled,
+        'sm:p-2 shadow-lg bg-nuxty-darker bg-opacity-100': scrolled,
       }"
     >
       <div
@@ -23,10 +23,10 @@
         <nuxt-link class="block p-2" to="/">
           <NuxtyLogo class="h-9" style="max-width: 120px" />
         </nuxt-link>
-        <ul class="m-0 p-0 hidden sm:flex">
+        <ul class="m-0 p-0 hidden sm:flex text-white">
           <li v-for="(link, i) in links" :key="i">
             <nuxt-link
-              class="hover:bg-gray-200 focus:bg-gray-200 p-3 rounded-xl ml-2"
+              class="hover:bg-nuxty-darkest focus:bg-nuxty-darkest p-3 rounded-xl ml-2"
               :to="link.route"
             >
               {{ link.label }}
@@ -53,7 +53,7 @@
         :class="{ hidden: !showMobileMenu, 'h-0': !showMobileMenu }"
         class="w-full h-full flex justify-center items-start mt-20"
       >
-        <ul class="m-0 p-0 block">
+        <ul class="m-0 p-0 block text-white">
           <li
             v-for="(link, i) in links"
             :key="i"
@@ -61,7 +61,7 @@
             :style="`--animation-order: ${i + 1}`"
           >
             <nuxt-link
-              class="hover:bg-gray-200 text-center text-xl font-bold focus:bg-gray-200 py-3 px-5 rounded-xl ml-2 block"
+              class="hover:bg-nuxty-darkest focus:bg-nuxty-darkest text-center text-xl font-bold py-3 px-5 rounded-xl ml-2 block"
               to="link.route"
             >
               {{ link.label }}
