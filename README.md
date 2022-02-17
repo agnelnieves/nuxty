@@ -4,6 +4,14 @@
 
 Production ready Nuxtjs starter
 
+## Features
+
+- [x] 💨 [Tailwind CSS v2](https://v2.tailwindcss.com/)
+- [x] 🧩 Built-in Components & Layout
+- [x] ✨ Eslint & Prettier
+- [x] 🐶 Husky & Commitlint
+- [x] 🧭 PWA ready
+
 ## Requirements
 
 - Node 16.14.0
