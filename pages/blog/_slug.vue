@@ -50,7 +50,7 @@ export default {
 
 <style scoped lang="scss">
 section {
-  @apply relative text-white;
+  @apply relative text-white px-3;
 
   &::before {
     @apply bg-nuxty-darker absolute top-0 left-0 w-full;
@@ -65,60 +65,61 @@ section {
 }
 
 h1 {
-  @apply text-4xl md:text-5xl lg:text-6xl;
+  @apply text-3xl md:text-4xl font-extrabold;
 }
 
 .metadata {
-  @apply pt-20 2xl:max-w-7xl xl:max-w-5xl lg:max-w-4xl md:max-w-2xl sm:max-w-lg max-w-full mx-auto px-6;
+  @apply pt-10 xl:max-w-2xl md:max-w-2xl sm:max-w-lg max-w-full mx-auto px-6 mb-8;
 
   p {
-    @apply opacity-70;
+    @apply opacity-70 text-sm mt-2;
   }
 }
 
 .main-img {
-  @apply rounded-xl mt-5 2xl:max-w-7xl xl:max-w-5xl lg:max-w-4xl md:max-w-2xl sm:max-w-lg max-w-full mx-auto px-4;
+  @apply mt-5 2xl:max-w-3xl xl:max-w-5xl lg:max-w-4xl md:max-w-2xl sm:max-w-lg max-w-full mx-auto mb-6 rounded-3xl shadow-xl;
 }
 
 .next-prev-container {
   @apply 2xl:max-w-6xl xl:max-w-4xl lg:max-w-2xl md:max-w-lg sm:max-w-sm max-w-full mx-auto;
 }
-</style>
 
-<style lang="scss">
+/* Unscopped styles */
 .article {
-  * {
-    @apply max-w-full;
-  }
+  @apply flex justify-center;
 
-  /* Unscopped styles */
+  ::v-deep {
+    .nuxt-content {
+      @apply max-w-prose;
+    }
 
-  h2 {
-    @apply text-4xl mt-8 mb-6;
-  }
+    img {
+      @apply my-3 rounded-3xl mt-5 mx-auto shadow-xl;
+    }
 
-  h3 {
-    @apply text-3xl;
-  }
+    h2 {
+      @apply text-4xl mt-8 mb-6;
+    }
 
-  h4 {
-    @apply text-2xl;
-  }
+    h3 {
+      @apply text-3xl;
+    }
 
-  h5 {
-    @apply text-xl;
-  }
+    h4 {
+      @apply text-2xl;
+    }
 
-  h6 {
-    @apply text-base;
-  }
+    h5 {
+      @apply text-xl;
+    }
 
-  img {
-    @apply my-3 rounded-xl mt-5 2xl:max-w-5xl xl:max-w-3xl lg:max-w-xl md:max-w-md sm:max-w-sm max-w-full mx-auto px-4;
-  }
+    h6 {
+      @apply text-base;
+    }
 
-  p {
-    @apply my-3;
+    p {
+      @apply my-3 text-lg;
+    }
   }
 }
 </style>
