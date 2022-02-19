@@ -45,6 +45,8 @@ export default {
   .prev_next--link {
     @apply bg-gray-200 font-bold hover:underline flex w-full rounded-lg overflow-hidden items-center justify-between items-center p-2;
 
+    max-width: 25.75rem;
+
     .content {
       @apply md:pr-2;
     }

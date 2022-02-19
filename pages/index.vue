@@ -70,10 +70,6 @@
           </NuxtLink>
         </div>
       </div>
-
-      <div class="text-center px-4">
-        <a href="#" class="button"> View all posts </a>
-      </div>
     </section>
     <div class="cta">
       <div class="container">
@@ -90,7 +86,6 @@ export default {
   name: 'IndexPage',
   async asyncData({ $content }) {
     const articles = await $content('articles')
-      .limit(6)
       .only([
         'title',
         'description',

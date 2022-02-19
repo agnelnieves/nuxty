@@ -35,6 +35,7 @@
         </ul>
         <GlobalSearch />
         <button
+          v-if="links"
           class="flex flex-col justify-between items-end bg-gray-200 py-4 px-3 sm:hidden toggle-btn rounded-2xl cursor-pointer toggle-button"
           :class="{ 'toggle-active': showMobileMenu }"
           @click="toggleMobileMenu"
