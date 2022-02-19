@@ -58,7 +58,7 @@ export default {
 
 <style scoped lang="scss">
 section {
-  @apply relative text-white px-3;
+  @apply relative text-white px-3 sm:pt-24 pt-20;
 
   &::before {
     @apply bg-nuxty-darker absolute top-0 left-0 w-full;

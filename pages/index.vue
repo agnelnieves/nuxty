@@ -115,7 +115,7 @@ export default {
 
 <style scoped lang="scss">
 .hero {
-  @apply relative pt-6 pb-16 sm:pb-44 bg-nuxty-darker;
+  @apply relative py-16 sm:pb-44 bg-nuxty-darker;
 }
 
 /* ARTICLES */

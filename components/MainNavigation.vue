@@ -1,7 +1,6 @@
 <template>
   <nav
     :class="{
-      'p-8 pt-0': !scrolled && !showMobileMenu,
       'h-full': showMobileMenu,
     }"
     class="fixed top-0 left-0 w-full flex box-border"
@@ -13,8 +12,9 @@
       class="w-full mx-auto max-w-full"
       :class="{
         'h-full bg-nuxty-darker': showMobileMenu,
-        'rounded-xl sm:p-6': !scrolled,
-        'sm:p-2 shadow-lg bg-nuxty-darker bg-opacity-100': scrolled,
+        'p-6': !scrolled,
+        'shadow-lg bg-nuxty-darker bg-opacity-100': scrolled,
+        'p-2': showMobileMenu || scrolled,
       }"
     >
       <div
@@ -121,7 +121,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 nav,
 #nav-wrapper {
   transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -129,6 +129,13 @@ nav,
 
 .toggle-button * {
   transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.toggle-button {
+  background: #b1fede4f;
+  span {
+    background: #02dc81;
+  }
 }
 
 .toggle-active span {
