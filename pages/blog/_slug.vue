@@ -81,7 +81,7 @@ h1 {
 }
 
 .next-prev-container {
-  @apply 2xl:max-w-6xl xl:max-w-4xl lg:max-w-2xl md:max-w-lg sm:max-w-sm max-w-full mx-auto;
+  @apply md:max-w-4xl sm:max-w-sm max-w-full mx-auto px-4;
 }
 
 /* Unscopped styles */

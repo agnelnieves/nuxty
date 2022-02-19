@@ -1,41 +1,27 @@
 <template>
-  <div class="flex justify-center md:justify-between flex-wrap">
+  <div class="next-prev-container">
     <NuxtLink
       v-if="data.prev"
       :to="{ name: 'blog-slug', params: { slug: data.prev.slug } }"
-      class="font-bold hover:underline prev_next--link flex"
+      class="prev_next--link"
     >
-      <div class="flex justify-between">
-        <div class="py-6 pl-6">
-          <p class="text-sm opacity-80">prev post</p>
-          {{ data.prev.title }}
-        </div>
-        <img
-          class="ml-6 object-cover w-24 h-full"
-          :src="data.prev.image.src"
-          :alt="data.prev.image.alt"
-        />
+      <img :src="data.prev.image.src" :alt="data.prev.image.alt" />
+      <div class="content">
+        <span>Previous post</span>
+        <h4>{{ data.prev.title }}</h4>
       </div>
     </NuxtLink>
-    <span v-else>&nbsp;</span>
     <NuxtLink
       v-if="data.next"
       :to="{ name: 'blog-slug', params: { slug: data.next.slug } }"
-      class="font-bold hover:underline prev_next--link flex"
+      class="prev_next--link"
     >
-      <div class="flex justify-between">
-        <img
-          class="mr-6 object-cover w-24 h-full"
-          :src="data.next.image.src"
-          :alt="data.next.image.alt"
-        />
-        <div class="py-6 pr-6">
-          <p class="text-sm opacity-80">Next post</p>
-          {{ data.next.title }}
-        </div>
+      <img :src="data.next.image.src" :alt="data.next.image.alt" />
+      <div class="content">
+        <span>Next post</span>
+        <h4>{{ data.next.title }}</h4>
       </div>
     </NuxtLink>
-    <span v-else>&nbsp;</span>
   </div>
 </template>
 
@@ -51,8 +37,28 @@ export default {
 }
 </script>
 
-<style lang="scss">
-.prev_next--link {
-  @apply my-3 bg-gray-200;
+<style lang="scss" scoped>
+.next-prev-container {
+  @apply flex justify-center md:justify-between md:flex-nowrap flex-wrap gap-2;
+}
+::v-deep {
+  .prev_next--link {
+    @apply bg-gray-200 font-bold hover:underline flex w-full rounded-lg overflow-hidden items-center justify-between items-center p-2;
+
+    .content {
+      @apply md:py-6 md:pr-6;
+    }
+
+    span {
+      @apply text-sm opacity-70;
+    }
+
+    img {
+      @apply rounded-lg mr-4 object-cover;
+
+      min-width: 7.625rem;
+      height: 7.125rem;
+    }
+  }
 }
 </style>
