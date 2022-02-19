@@ -46,7 +46,7 @@ export default {
     @apply bg-gray-200 font-bold hover:underline flex w-full rounded-lg overflow-hidden items-center justify-between items-center p-2;
 
     .content {
-      @apply md:py-6 md:pr-6;
+      @apply md:pr-2;
     }
 
     span {

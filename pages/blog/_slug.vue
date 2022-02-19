@@ -17,6 +17,14 @@
     </section>
     <article class="article">
       <nuxt-content :document="article" />
+      <div class="tags">
+        <span class="font-bold">Tags</span>
+        <div>
+          <NuxtyBadge v-for="category in article.categories" :key="category">
+            {{ category }}
+          </NuxtyBadge>
+        </div>
+      </div>
     </article>
     <div class="next-prev-container">
       <NextPrev v-if="articles.prev || articles.next" :data="articles" />
@@ -60,9 +68,6 @@ section {
     z-index: -1;
   }
 }
-.article {
-  @apply 2xl:max-w-6xl xl:max-w-4xl lg:max-w-2xl md:max-w-lg sm:max-w-sm max-w-full mx-auto px-6 text-black my-10 flex;
-}
 
 h1 {
   @apply text-3xl md:text-4xl font-extrabold;
@@ -84,17 +89,31 @@ h1 {
   @apply md:max-w-4xl sm:max-w-sm max-w-full mx-auto px-4;
 }
 
+.tags {
+  @apply max-w-prose mx-auto w-full;
+
+  div {
+    @apply mt-4 flex gap-2 flex-wrap;
+  }
+}
+
 /* Unscopped styles */
 .article {
-  @apply flex justify-center;
+  @apply 2xl:max-w-6xl xl:max-w-4xl lg:max-w-2xl md:max-w-lg sm:max-w-sm max-w-full mx-auto px-6 text-black my-10 flex flex-col items-center;
 
+  // Pierce into the children's component styles
+  // In this case <nuxt-content>
   ::v-deep {
     .nuxt-content {
       @apply max-w-prose;
     }
 
+    iframe {
+      @apply max-w-full;
+    }
+
     img {
-      @apply my-3 rounded-3xl mt-5 mx-auto shadow-xl;
+      @apply my-3 rounded-3xl mt-5 mx-auto shadow-xl max-w-full;
     }
 
     h2 {

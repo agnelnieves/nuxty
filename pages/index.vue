@@ -57,13 +57,13 @@
                   </p>
                 </div>
                 <div class="categories">
-                  <span
+                  <NuxtyBadge
                     v-for="category in article.categories"
                     :key="category"
                     class="category"
                   >
                     {{ category }}
-                  </span>
+                  </NuxtyBadge>
                 </div>
               </div>
             </div>
@@ -157,10 +157,6 @@ export default {
 
   .categories {
     @apply mt-4 flex gap-2 flex-wrap;
-
-    .category {
-      @apply inline-flex items-center px-2.5 py-0.5 rounded-md text-sm font-medium bg-gray-100 text-gray-800;
-    }
   }
 }
 
