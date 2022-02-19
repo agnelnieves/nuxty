@@ -4,7 +4,7 @@
       <div class="mt-16 mx-auto max-w-7xl px-4 sm:mt-24 sm:px-6">
         <div class="text-center">
           <img
-            class="inline-block h-24 w-24 rounded-full mb-4 object-cover border-2 border-gray-300"
+            class="avatar"
             src="/images/profile-pic.png"
             alt="John wick funko pop with his dog"
           />
@@ -175,5 +175,11 @@ export default {
       @apply text-3xl font-extrabold text-white sm:text-4xl;
     }
   }
+}
+
+.avatar {
+  @apply inline-block h-24 w-24 rounded-full mb-4 object-cover;
+
+  box-shadow: #012e36 0 0 0 3px, #00dc82 0 0 0 5px;
 }
 </style>
