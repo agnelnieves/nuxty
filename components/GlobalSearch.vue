@@ -36,7 +36,7 @@
       />
 
       <div slot="content">
-        <transition>
+        <transition mode="out-in" name="content">
           <p v-if="articles.length === 0">Search for articles, tags or text</p>
           <ul v-else class="flex flex-col gap-2">
             <li
@@ -142,5 +142,16 @@ h4 {
 
 .categories {
   @apply mt-1 flex gap-2 flex-wrap;
+}
+
+.content-enter,
+.content-leave-to {
+  opacity: 0;
+  transform: translateY(5px);
+}
+
+.content-enter-active,
+.content-leave-active {
+  transition: all 0.3s ease;
 }
 </style>
