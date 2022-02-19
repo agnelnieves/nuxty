@@ -8,9 +8,13 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Production-ready nuxtjs Starter',
+      },
       { name: 'format-detection', content: 'telephone=no' },
-      { name: 'msapplication-TileColor', content: '#da532c' },
+      { name: 'msapplication-TileColor', content: '#012A35' },
       { name: 'theme-color', content: '#012A35' },
     ],
     link: [
