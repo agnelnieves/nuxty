@@ -4,17 +4,22 @@
       <div class="mt-16 mx-auto max-w-7xl px-4 sm:mt-24 sm:px-6">
         <div class="text-center">
           <img
+            data-aos="fade-up-sm"
             class="avatar"
             src="/images/profile-pic.png"
             alt="John wick funko pop with his dog"
           />
 
           <h1
+            data-aos="fade-up-sm"
+            data-aos-delay="50"
             class="text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-4xl"
           >
             👋 Hey there, It’s John Wick.
           </h1>
           <p
+            data-aos-delay="100"
+            data-aos="fade-up-sm"
             class="mt-3 max-w-md mx-auto text-base text-gray-200 sm:text-lg md:mt-5 md:text-xl md:max-w-2xl"
           >
             You know who I am. But here's an overview for those who don't. I'm a
@@ -29,7 +34,7 @@
     </section>
     <section class="articles">
       <div class="container">
-        <div class="article-grid">
+        <div class="article-grid" data-aos-delay="100" data-aos="fade-up-sm">
           <!-- BLOG CARDS -->
           <NuxtLink
             v-for="article in articles"
@@ -73,8 +78,17 @@
     </section>
     <div class="cta">
       <div class="container">
-        <h2 class="title">Have a project in mind? Let’s get to work.👋📫</h2>
-        <a href="#" class="button light"> Contact me </a>
+        <h2 data-aos="fade-up-sm" class="title">
+          Have a project in mind? Let’s get to work.👋📫
+        </h2>
+        <a
+          data-aos-delay="50"
+          data-aos="fade-up-sm"
+          href="#"
+          class="button light"
+        >
+          Contact me
+        </a>
       </div>
     </div>
   </main>

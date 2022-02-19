@@ -53,10 +53,10 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ['~/assets/scss/globals.scss'],
+  css: ['~/assets/scss/globals.scss', 'aos/dist/aos.css'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: [{ src: '~/plugins/aos.js', ssr: false }],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,

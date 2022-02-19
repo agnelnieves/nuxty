@@ -2,20 +2,22 @@
   <div>
     <section>
       <div class="metadata">
-        <h1>{{ article.title }}</h1>
-        <p>
+        <h1 data-aos="fade-up-sm">{{ article.title }}</h1>
+        <p data-aos="fade-up-sm" data-aos-delay="50">
           Posted on: {{ getDate(article.createdAt) }} • Updated on:
           {{ getDate(article.updatedAt) }}
         </p>
       </div>
       <img
+        data-aos="fade-up-sm"
+        data-aos-delay="100"
         loading="lazy"
         class="main-img"
         :src="article.image.src"
         :alt="article.image.alt"
       />
     </section>
-    <article class="article">
+    <article class="article" data-aos="fade-up-sm" data-aos-delay="150">
       <nuxt-content :document="article" />
       <div class="tags">
         <span class="font-bold">Tags</span>
